@@ -23,3 +23,12 @@ try {
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
+
+function parse(array $list): array
+{
+	$output = [];
+	foreach ($list as &$object) {
+		$output[$object['id']] = json_decode($object['data']);
+	}
+	return $output;
+}
