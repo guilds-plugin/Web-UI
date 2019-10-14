@@ -16,11 +16,7 @@
                     <?php foreach ($guilds as $guild_index => $guild): ?>
                     <tr>
                         <td><a href="/guild.php?id=<?= $guild->id ?>"><img style="width: 50px; height: 50px;" src="https://mc-heads.net/avatar/<?= $guild->guildMaster->uuid ?>/100"><?= $guild->name ?></a></td>
-                        <td>
-                            <?php foreach($guild->members as $member) : ?>
-                            <?= $member->uuid ?>
-                            <?php endforeach; ?>
-                        </td>
+                        <td><? echo sizeof($guild->members) ?></td>
                         <td><?= $guild->status ?></td>
                         <td>
                             <? echo date("m/d/Y H:i:s", $guild->creationDate / 1000); ?>
