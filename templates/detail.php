@@ -2,6 +2,8 @@
 <main>
 	<a href="/">Go back</a>
 	<h1><?= $guild->name ?></h1>
-	<!-- TODO: display the guild's data -->
+	<?php foreach($guild->members as $member): ?>
+    <img src = "https://mc-heads.net/body/<?= $member->uuid ?>">
+    <?php endforeach; ?>
 </main>
 <?php include('shared/footer.html') ?>
