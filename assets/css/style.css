@@ -44,3 +44,28 @@ table th {
 table td, table th {
     padding: .5rem 1rem;
 }
+
+.guild-skull {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 8px;
+    float: left;
+}
+
+.table-bordered {
+    border: 3px solid black;
+}
+
+#main-table {
+    
+}
+
+#main-table td, #main-table th {
+    border: 3px solid black;
+    padding: 8px;
+}
+
+.members {
+    text-align: center;
+}
