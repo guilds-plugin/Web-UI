@@ -1,4 +1,4 @@
-<?php include('shared/header.html') ?>
+<?php include('shared/header.php') ?>
 <main>
     <h1>Guilds</h1>
     <table class="table-bordered" id="main-table">
@@ -13,17 +13,20 @@
         <tbody>
             <?php foreach ($guilds as $guild_index => $guild): ?>
             <tr>
-                <td><img class="guild-skull" src="https://mc-heads.net/avatar/<?= $guild->guildMaster->uuid ?>/100"><a href="/guild.php?id=<?= $guild->id ?>"><?= $guild->name ?></a></td>
+                <td>
+                    <img class="guild-skull" src="https://mc-heads.net/avatar/<?= $guild->guildMaster->uuid ?>/100" alt="<?= $guild->name ?>'s avatar">
+                    <a href="/guild.php?id=<?= $guild->id ?>"><?= $guild->name ?></a>
+                </td>
                 <td class="members">
-                    <? echo sizeof($guild->members) ?>
+                    <?= count($guild->members) ?>
                 </td>
                 <td><?= $guild->status ?></td>
                 <td>
-                    <? echo date("m/d/Y H:i:s", $guild->creationDate / 1000); ?>
+                    <?= date("m/d/Y H:i:s", $guild->creationDate / 1000); ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </main>
-<?php include('shared/footer.html') ?>
+<?php include('shared/footer.php') ?>
