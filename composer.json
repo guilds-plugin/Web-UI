@@ -1,5 +1,6 @@
 {
-    "require": {
-        "symfony/dotenv": "^4.3"
-    }
+  "require": {
+    "symfony/dotenv": "^4.3",
+    "ext-pdo": "*",
+  }
 }
