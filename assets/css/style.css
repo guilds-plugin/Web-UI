@@ -14,7 +14,7 @@ body {
     overflow-y: scroll;
     line-height: 1.5;
     max-width: 50rem;
-    margin: auto;
+    margin: 2rem auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -31,6 +31,23 @@ a:hover {
 
 p {
     margin-bottom: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    flex: 1;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+footer {
+    font-size: .8rem;
 }
 
 table {
@@ -50,20 +67,10 @@ table td, table th {
     width: 30px;
     display: inline-block;
     margin-right: 8px;
-    float: left;
 }
 
-.table-bordered {
-    border: 3px solid black;
-}
-
-#main-table {
-    
-}
-
-#main-table td, #main-table th {
-    border: 3px solid black;
-    padding: 8px;
+.table th {
+    background-color: #e8e8e8;
 }
 
 .members {
