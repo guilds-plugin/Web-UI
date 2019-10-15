@@ -1,5 +1,5 @@
 <?php
-require_once('bootstrap.php');
+require_once __DIR__ . '/bootstrap.php';
 
 // Get the guild ID
 $guildId = $_GET['id'];
@@ -8,4 +8,4 @@ $stmt->bindParam(':guildId', $guildId);
 $stmt->execute();
 $guild = parse($stmt->fetchAll())[$guildId];
 
-include('templates/detail.php');
+include __DIR__ . '/templates/detail.php';
