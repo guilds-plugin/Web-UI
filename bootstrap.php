@@ -36,7 +36,7 @@ function parse(array $list): array
 	return $output;
 }
 
-function calcAge(object $guildData)
+function calcAge($guildData)
 {
     $start = new DateTime('@' . round($guildData->creationDate / 1000));
     $end = DateTime::createFromFormat('U.u', microtime(true));
