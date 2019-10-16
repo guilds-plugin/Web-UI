@@ -7,7 +7,7 @@ use Symfony\Component\Dotenv\Dotenv;
 
  // Read the environment variables
 $dotenv = new Dotenv();
-$dotenv->load(__DIR__.'/.env');
+$dotenv->load(__DIR__.'/.env.local');
 
 // Prep the DSN and options for PDO
 $dsn = "mysql:host=".$_ENV['DB_HOST'].";dbname=".$_ENV['DB_NAME'].";charset=utf8";
