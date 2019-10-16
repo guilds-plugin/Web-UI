@@ -7,5 +7,5 @@ like this:
   - We read those variables and open up a PDO connection to your database
   - Once we have your guilds data, we send it to a flat PHP template
   - We provide a .htaccess file to turn on pretty URls, but this is optional
- *
+  
 We hope you enjoy the dashboard!
