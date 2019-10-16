@@ -7,10 +7,12 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Name</th>
+                <th>Guild</th>
+                <th>Balance</th>
                 <th>Members</th>
-                <th>Status</th>
-                <th>Creation Date</th>
+                <th>Tier</th>
+                <th>Arena Victories</th>
+                <th>Age</th>
             </tr>
         </thead>
         <tbody>
@@ -22,12 +24,20 @@
                 <td>
                     <a href="/guild.php?id=<?= $guild->id ?>"><?= $guild->name ?></a>
                 </td>
+                <td>
+                    <?= $_ENV['CURRENCY_SYMBOL'] . number_format($guild->balance, $_ENV['DECIMAL_PLACES']) ?>
+                </td>
                 <td class="members">
                     <?= count($guild->members) ?>
                 </td>
-                <td><?= $guild->status ?></td>
                 <td>
-                    <?= date("m/d/Y", $guild->creationDate / 1000); ?>
+                    <?= $guild->tier->level ?>
+                </td>
+                <td>
+                    <?php if ($guild->guildScore->wins == 0) { echo("0"); } else { echo($guild->guildScore->wins); } ?>
+                </td>
+                <td>
+                    ""
                 </td>
             </tr>
             <?php endforeach; ?>
