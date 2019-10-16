@@ -28,7 +28,19 @@ function parse(array $list): array
 {
 	$output = [];
 	foreach ($list as &$object) {
-		$output[$object['id']] = json_decode($object['data']);
+		$guildData = json_decode($object['data']);
+		calcAge($guildData);
+		$output[$object['id']] = $guildData;
+
 	}
 	return $output;
+}
+
+function calcAge(object $guildData)
+{
+    $start = new DateTime('@' . round($guildData->creationDate / 1000));
+    $end = DateTime::createFromFormat('U.u', microtime(true));
+
+    $interval = $end->diff($start);
+    $guildData->age = $interval->days;
 }

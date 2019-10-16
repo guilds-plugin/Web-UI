@@ -36,15 +36,7 @@
                 <td>
                     <?php if ($guild->guildScore->wins == 0) { echo("0"); } else { echo($guild->guildScore->wins); } ?>
                 </td>
-                <td>
-                    <?
-                    $creationDate = strtotime('@' . strval($guild->creationDate));
-                    $currentDate =  strtotime('now');
-                    
-                    $diff = abs($currentDate - $creationDate);
-                    echo($diff);
-                    ?>
-                </td>
+                <td><?= $guild->age ?> day(s)</td>
             </tr>
             <?php endforeach; ?>
         </tbody>
