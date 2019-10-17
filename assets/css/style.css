@@ -13,9 +13,10 @@ body {
     color: #333;
     overflow-y: scroll;
     line-height: 1.5;
-    max-width: 50rem;
-    margin: 2rem auto;
+    width: 1100px;
+    margin: 0px auto;
 }
+
 
 h1, h2, h3, h4, h5 {
     color: #222;
@@ -23,6 +24,7 @@ h1, h2, h3, h4, h5 {
 
 a {
     color: #174B69;
+    text-decoration: none;
 }
 
 a:hover {
@@ -50,12 +52,29 @@ footer {
     font-size: .8rem;
 }
 
-table {
+#board {
+    width: 100%;
+    margin: 10px 0px 30px;
+}
+
+#board th {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    padding: 6px 0px 8px;
+    border-bottom: solid 4px #09F;
+}
+
+table, th, td {
     border-collapse: collapse;
 }
 
 table th {
     text-align: left;
+}
+
+tr:nth-child(even) td {
+    background-color: #e8e8e8;   
 }
 
 table td, table th {
@@ -73,6 +92,6 @@ table td, table th {
     background-color: #e8e8e8;
 }
 
-.members {
+.center {
     text-align: center;
 }
