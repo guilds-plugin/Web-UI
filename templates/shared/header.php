@@ -9,5 +9,7 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/balloon.css">
+    <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
+<?php include('nav.php') ?>

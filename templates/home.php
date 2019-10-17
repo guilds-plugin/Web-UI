@@ -1,18 +1,16 @@
 <?php include('shared/header.php') ?>
-<header>
-    <h1>Guilds</h1>
-</header>
 <main>
+    <div class="main-container">
     <table class="table" id="board">
         <thead>
             <tr>
                 <th></th>
-                <th aria-label="The name of the Guild" data-balloon-pos="up">Guild</th>
-                <th aria-label="The current bank balance of the Guild" data-balloon-pos="up">Balance</th>
-                <th aria-label="The amount of members in the Guild" data-balloon-pos="up">Members</th>
-                <th aria-label="The level of the Guild" data-balloon-pos="up">Tier</th>
-                <th aria-label="The number of war victories the Guild has" data-balloon-pos="up">Arena Victories</th>
-                <th aria-label="The age of the Guild" data-balloon-pos="up">Age</th>
+                <th aria-label="The name of the Guild" data-balloon-pos="up"><i class="fab fa-fort-awesome"></i> Guild</th>
+                <th aria-label="The current bank balance of the Guild" data-balloon-pos="up"><i class="fab fa-fort-awesome"></i> Balance</th>
+                <th aria-label="The amount of members in the Guild" data-balloon-pos="up"><i class="fas fa-users"></i> Members</th>
+                <th aria-label="The level of the Guild" data-balloon-pos="up"><i class="fas fa-level-up-alt"></i> Tier</th>
+                <th aria-label="The number of war victories the Guild has" data-balloon-pos="up"><i class="fas fa-trophy"></i> Arena Victories</th>
+                <th aria-label="The age of the Guild" data-balloon-pos="up"><i class="fas fa-birthday-cake"></i> Age</th>
             </tr>
         </thead>
         <tbody>
@@ -41,5 +39,6 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+        </div>
 </main>
 <?php include('shared/footer.php') ?>
