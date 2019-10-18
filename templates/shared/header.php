@@ -12,4 +12,7 @@
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
+<header>
 <?php include('nav.php') ?>
+    <input type="text" class="search" placeholder="Search for your guild name" />
+</header>

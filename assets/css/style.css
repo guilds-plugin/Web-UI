@@ -1,3 +1,5 @@
+/* CSS reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +16,6 @@ body {
     overflow-y: scroll;
     line-height: 1.5;
 }
-
-.main-container {
-    width: 1100px;
-    margin: 0px auto;
-}
-
 
 h1, h2, h3, h4, h5 {
     color: #222;
@@ -38,35 +34,36 @@ p {
     margin-bottom: 1rem;
 }
 
-header {
-    display: flex;
-    align-items: center;
+ul {
+    list-style: none;
 }
 
-header h1 {
-    flex: 1;
+/* Layout */
+
+header {
+    display: flex;
+    border-bottom :1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+nav li {
+    display:inline-block;
+    padding:10px;
 }
 
 main {
-    padding: 2rem 0;
+    width: 65rem;
+    margin: 0 auto;
 }
 
 footer {
     font-size: .8rem;
+    margin-top: 2rem;
 }
 
-#board {
-    width: 100%;
-    margin: 10px 0px 30px;
-}
-
-#board th {
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-    padding: 6px 0px 8px;
-    border-bottom: solid 4px #09F;
-}
+/* Table styling */
 
 table, th, td {
     border-collapse: collapse;
@@ -84,6 +81,10 @@ table td, table th {
     padding: .5rem 1rem;
 }
 
+th > i {
+    margin-right: 5px;
+}
+
 .guild-skull {
     height: 30px;
     width: 30px;
@@ -91,28 +92,26 @@ table td, table th {
     margin-right: 8px;
 }
 
+.table {
+    width: 100%;
+}
+
 .table th {
     background-color: #e8e8e8;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    padding: 6px 0px 8px;
+    border-bottom: solid 4px #09F;
 }
 
 .center {
     text-align: center;
 }
 
-/* Navbar */
+/* Inputs */
 
-.nav{
-    border:1px solid #ccc;
-    border-width:1px 0;
-    list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
-}
-.nav li{
-    display:inline;
-}
-.nav a{
-    display:inline-block;
-    padding:10px;
+input {
+    height: 2rem;
+    min-width: 20rem;
 }

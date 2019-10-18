@@ -1,7 +1,6 @@
 <?php include('shared/header.php') ?>
 <main>
-    <div class="main-container">
-    <table class="table" id="board">
+    <table class="table">
         <thead>
             <tr>
                 <th></th>
@@ -19,26 +18,26 @@
                 <td class="avatar">
                     <img class="guild-skull" src="https://mc-heads.net/avatar/<?= $guild->guildMaster->uuid ?>/100" alt="<?= $guild->name ?>'s avatar">
                 </td>
-                <td class="center">
-                    <a href="/guild.php?id=<?= $guild->id ?>"><?= $guild->name ?></a>
+                <td>
+                    <a href="/guild.php?id=<?= $guild->id ?>" class="guild-name"><?= $guild->name ?></a>
                 </td>
-                <td class="center">
+                <td>
                     <?= $_ENV['CURRENCY_SYMBOL'] . number_format($guild->balance, $_ENV['DECIMAL_PLACES']) ?>
                 </td>
-                <td class="center">
+                <td>
                     <?= count($guild->members) ?>
                 </td>
-                <td class="center">
+                <td>
                     <?= $guild->tier->level ?>
                 </td>
-                <td class="center">
-                    <?php if ($guild->guildScore->wins == 0) { echo("0"); } else { echo($guild->guildScore->wins); } ?>
+                <td>
+                    <?= $guild->guildScore->wins == 0 ? '0' : $guild->guildScore->wins ?>
                 </td>
-                <td class="center"><?= $guild->age ?> day(s)</td>
+                <td>
+                    <?= $guild->age ?> day(s)
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-        </div>
-</main>
 <?php include('shared/footer.php') ?>

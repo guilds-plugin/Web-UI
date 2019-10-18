@@ -1,3 +1,5 @@
-<ul class="nav">
-  <li><a href="/">Home</a></li>
-</ul>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+</nav>
