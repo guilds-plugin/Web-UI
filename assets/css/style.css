@@ -96,6 +96,10 @@ th > i {
     width: 100%;
 }
 
+.table td {
+    text-align: center;
+}
+
 .table th {
     background-color: #e8e8e8;
     text-align: center;
